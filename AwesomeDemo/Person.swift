@@ -3,7 +3,17 @@ import UIKit
 
 class Person: NSObject {
 
-    var name:String = ""
-    var age:Int = 0
+    dynamic var name:String = ""
+    
+    override init() {
+        super.init()
+        name = "Persona desconocida"
+    }
+    
+    func update(newName: String) {
+        if newName != "" {
+            name = newName
+        }
+    }
     
 }
