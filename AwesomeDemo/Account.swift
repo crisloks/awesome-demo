@@ -4,8 +4,7 @@ import UIKit
 class Account: NSObject {
     
     let startingBalance = 100.0
-    var currentBalance = 0.0
-    let currentBalanceKeyPath = "currentBalance"
+    dynamic var currentBalance = 0.0
     
     override init() {
         super.init()
@@ -14,7 +13,6 @@ class Account: NSObject {
     
     func update(amount: Double) {
         currentBalance += amount
-        setValue(currentBalance, forKey: currentBalanceKeyPath)
     }
 
 }

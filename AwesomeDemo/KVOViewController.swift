@@ -1,6 +1,8 @@
 
 import UIKit
 
+private var accountContext = 0
+
 class KVOViewController: UIViewController {
     
     @IBOutlet weak var currentBalanceLabel: UILabel!
@@ -13,7 +15,7 @@ class KVOViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         currentBalanceLabel.text = "Current balance: \(account.currentBalance)"
         
-        account.addObserver(self, forKeyPath: currentBalanceKeyPath, options: [.Old, .New], context: nil)
+        account.addObserver(self, forKeyPath: currentBalanceKeyPath, options: .New, context: &accountContext)
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,13 +32,17 @@ class KVOViewController: UIViewController {
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        if keyPath == currentBalanceKeyPath {
-            if account.currentBalance < 0 {
-                currentBalanceLabel.textColor = UIColor.redColor()
-            } else {
-                currentBalanceLabel.textColor = UIColor.blackColor()
+        if context == &accountContext {
+            if let newValue = change?[NSKeyValueChangeNewKey] {
+                print("Current balance is now: \(newValue)")
+                currentBalanceLabel.text = "Current balance: \(newValue)"
+                let newValueInt = newValue.integerValue
+                if newValueInt < 0 {
+                    currentBalanceLabel.textColor = UIColor.redColor()
+                } else {
+                    currentBalanceLabel.textColor = UIColor.blackColor()
+                }
             }
-            currentBalanceLabel.text = "Current balance: \(account.currentBalance)"
         }
     }
     
