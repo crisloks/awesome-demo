@@ -24,6 +24,13 @@
                                     <segue destination="Tlg-oE-BB1" kind="show" id="lrz-fi-67l"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l9-5Z-bVU">
+                                <rect key="frame" x="104" y="223" width="166" height="30"/>
+                                <state key="normal" title="Delegates"/>
+                                <connections>
+                                    <segue destination="uJ4-Ec-7pj" kind="show" id="yrp-Om-A3K"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -32,7 +39,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1266" y="471"/>
+            <point key="canvasLocation" x="1265.5" y="470.5"/>
+        </scene>
+        <!--Delegates View Controller-->
+        <scene sceneID="pcZ-AL-8cT">
+            <objects>
+                <viewController id="uJ4-Ec-7pj" customClass="DelegatesViewController" customModule="AwesomeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7qR-DR-tyT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uv2-br-8dS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vsn-tN-tfW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fu0-8c-1Ma">
+                                <rect key="frame" x="71" y="148" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToDetail:" destination="uJ4-Ec-7pj" eventType="touchUpInside" id="Ndo-RP-qZR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cC-9G-Dtg">
+                                <rect key="frame" x="240" y="354" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToDetail:" destination="uJ4-Ec-7pj" eventType="touchUpInside" id="xol-mF-cbH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIj-xu-LRg">
+                                <rect key="frame" x="71" y="354" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToDetail:" destination="uJ4-Ec-7pj" eventType="touchUpInside" id="dzb-Jh-2Zj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxf-2j-SKe">
+                                <rect key="frame" x="240" y="148" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToDetail:" destination="uJ4-Ec-7pj" eventType="touchUpInside" id="bVg-Dr-G5s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="button1" destination="fu0-8c-1Ma" id="Evb-WD-ocg"/>
+                        <outlet property="button2" destination="rxf-2j-SKe" id="TLg-6C-pz1"/>
+                        <outlet property="button3" destination="IIj-xu-LRg" id="KFy-TY-YtK"/>
+                        <outlet property="button4" destination="6cC-9G-Dtg" id="Lcw-KS-QjN"/>
+                        <segue destination="4mh-iI-QcC" kind="presentation" identifier="goToDetailSegue" id="kBQ-xW-Ta5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFC-g2-bdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265.5" y="1317.5"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="eCm-ec-h4d">
+            <objects>
+                <viewController id="4mh-iI-QcC" customClass="DetailViewController" customModule="AwesomeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="11i-5u-idW"/>
+                        <viewControllerLayoutGuide type="bottom" id="k1H-OQ-7mo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CNL-hz-mlE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKu-dL-0pE">
+                                <rect key="frame" x="73" y="103" width="229" height="343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYW-so-mHQ">
+                                <rect key="frame" x="103" y="492" width="168" height="30"/>
+                                <state key="normal" title="Mark as read"/>
+                                <connections>
+                                    <action selector="markLectureAsRead:" destination="4mh-iI-QcC" eventType="touchUpInside" id="VRR-g4-SqZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cD7-UK-K8D">
+                                <rect key="frame" x="103" y="561" width="184" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissModal:" destination="4mh-iI-QcC" eventType="touchUpInside" id="aHp-JW-TXe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="lKu-dL-0pE" id="O7M-Nj-MN6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ko3-VE-tkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744.5" y="1317.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0gE-GX-eTd">
