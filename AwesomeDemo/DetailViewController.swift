@@ -3,6 +3,7 @@ import UIKit
 
 protocol DetailViewControllerDelegate: class {
     func markAsRead(lecture: Int)
+    func dismissLecture(controller : UIViewController)
 }
 
 class DetailViewController: UIViewController {
@@ -20,7 +21,7 @@ class DetailViewController: UIViewController {
     
     
     @IBAction func dismissModal(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {})
+        self.delegate?.dismissLecture(self)
     }
     
     

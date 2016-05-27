@@ -40,4 +40,8 @@ extension DelegatesViewController: DetailViewControllerDelegate {
         }
         
     }
+    
+    func dismissLecture(controller: UIViewController) {
+        controller.dismissViewControllerAnimated(true, completion: {})
+    }
 }
