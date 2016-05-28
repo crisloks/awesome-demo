@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B764AFF71CF7F00500448B55 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764AFF61CF7F00500448B55 /* DetailViewController.swift */; };
+		B764B00A1CF9444600448B55 /* NotificationPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764B0091CF9444600448B55 /* NotificationPostViewController.swift */; };
+		B764B00C1CF9446300448B55 /* FirstNotificationObserverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764B00B1CF9446300448B55 /* FirstNotificationObserverViewController.swift */; };
+		B764B00E1CF9447B00448B55 /* SecondNotificationObserverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764B00D1CF9447B00448B55 /* SecondNotificationObserverViewController.swift */; };
 		B7D3870C1CF7DEDF00E4CF43 /* DelegatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D3870B1CF7DEDF00E4CF43 /* DelegatesViewController.swift */; };
 		B7F9E6451CF6A8620006FD5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F9E6441CF6A8620006FD5E /* AppDelegate.swift */; };
 		B7F9E6471CF6A8620006FD5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F9E6461CF6A8620006FD5E /* ViewController.swift */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		B764AFF61CF7F00500448B55 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B764B0091CF9444600448B55 /* NotificationPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationPostViewController.swift; sourceTree = "<group>"; };
+		B764B00B1CF9446300448B55 /* FirstNotificationObserverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstNotificationObserverViewController.swift; sourceTree = "<group>"; };
+		B764B00D1CF9447B00448B55 /* SecondNotificationObserverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondNotificationObserverViewController.swift; sourceTree = "<group>"; };
 		B7D3870B1CF7DEDF00E4CF43 /* DelegatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegatesViewController.swift; sourceTree = "<group>"; };
 		B7F9E6411CF6A8620006FD5E /* AwesomeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F9E6441CF6A8620006FD5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +74,9 @@
 				B7F9E6441CF6A8620006FD5E /* AppDelegate.swift */,
 				B7F9E6461CF6A8620006FD5E /* ViewController.swift */,
 				B7F9E6481CF6A8620006FD5E /* Main.storyboard */,
+				B764B0091CF9444600448B55 /* NotificationPostViewController.swift */,
+				B764B00B1CF9446300448B55 /* FirstNotificationObserverViewController.swift */,
+				B764B00D1CF9447B00448B55 /* SecondNotificationObserverViewController.swift */,
 				B764AFF61CF7F00500448B55 /* DetailViewController.swift */,
 				B7D3870B1CF7DEDF00E4CF43 /* DelegatesViewController.swift */,
 				B7F9E6561CF6A8DD0006FD5E /* KVOViewController.swift */,
@@ -161,6 +170,9 @@
 				B7F9E65C1CF6AE150006FD5E /* Account.swift in Sources */,
 				B7F9E6471CF6A8620006FD5E /* ViewController.swift in Sources */,
 				B7F9E6451CF6A8620006FD5E /* AppDelegate.swift in Sources */,
+				B764B00E1CF9447B00448B55 /* SecondNotificationObserverViewController.swift in Sources */,
+				B764B00A1CF9444600448B55 /* NotificationPostViewController.swift in Sources */,
+				B764B00C1CF9446300448B55 /* FirstNotificationObserverViewController.swift in Sources */,
 				B7F9E65A1CF6A9C90006FD5E /* Person.swift in Sources */,
 				B7F9E6571CF6A8DD0006FD5E /* KVOViewController.swift in Sources */,
 				B7D3870C1CF7DEDF00E4CF43 /* DelegatesViewController.swift in Sources */,

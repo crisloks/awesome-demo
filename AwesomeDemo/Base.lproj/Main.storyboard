@@ -5,6 +5,93 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Item 2-->
+        <scene sceneID="xnO-0u-CHo">
+            <objects>
+                <viewController id="UND-Ry-9f7" customClass="FirstNotificationObserverViewController" customModule="AwesomeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FIy-rP-Yjd"/>
+                        <viewControllerLayoutGuide type="bottom" id="1oT-90-fRk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kfF-k1-Jtd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Still waiting for the notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGc-TJ-oZS">
+                                <rect key="frame" x="20" y="323" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="sL8-mE-4bO"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="wGc-TJ-oZS" id="2Ig-B7-Xbl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3C-ZP-RS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012.5" y="-970.5"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="V1J-nm-rOb">
+            <objects>
+                <viewController id="KPp-Gh-HMv" customClass="NotificationPostViewController" customModule="AwesomeDemo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VgV-wk-PTt"/>
+                        <viewControllerLayoutGuide type="bottom" id="koF-hN-mPa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hdV-5R-WKO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Send the notification then check the tabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9m-uq-oLt">
+                                <rect key="frame" x="20" y="277" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTK-Kh-rHE">
+                                <rect key="frame" x="104" y="306" width="167" height="30"/>
+                                <state key="normal" title="Post Notification"/>
+                                <connections>
+                                    <action selector="postNotification:" destination="KPp-Gh-HMv" eventType="touchUpInside" id="krV-h3-wBM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="3Ef-fQ-rbj"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="p9m-uq-oLt" id="0ja-J0-oQ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vLR-OY-odA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744.5" y="-1690.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Wbi-fi-btx">
+            <objects>
+                <tabBarController id="0Sx-3y-Bsl" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ljh-iI-YGk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KPp-Gh-HMv" kind="relationship" relationship="viewControllers" id="ZtA-sO-nJW"/>
+                        <segue destination="UND-Ry-9f7" kind="relationship" relationship="viewControllers" id="lGH-Q3-YA6"/>
+                        <segue destination="LpM-h8-UL9" kind="relationship" relationship="viewControllers" id="V8E-gG-hdu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TuO-34-buy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265.5" y="-441.5"/>
+        </scene>
         <!--Awesome Demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -29,6 +116,13 @@
                                 <state key="normal" title="Delegates"/>
                                 <connections>
                                     <segue destination="uJ4-Ec-7pj" kind="show" id="yrp-Om-A3K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6A-uq-Lqc">
+                                <rect key="frame" x="144" y="307" width="87" height="30"/>
+                                <state key="normal" title="Notifications"/>
+                                <connections>
+                                    <segue destination="0Sx-3y-Bsl" kind="show" id="AMc-s9-UrV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -197,6 +291,37 @@
             </objects>
             <point key="canvasLocation" x="1758.5" y="470.5"/>
         </scene>
+        <!--Item 3-->
+        <scene sceneID="xZ0-H3-mon">
+            <objects>
+                <viewController id="LpM-h8-UL9" customClass="SecondNotificationObserverViewController" customModule="AwesomeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rbZ-Gv-jaS"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZcW-wE-uXs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bpn-Go-s0S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Still waiting for the notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjL-mc-B8X">
+                                <rect key="frame" x="20" y="323" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 3" id="Bja-FD-NV4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="gjL-mc-B8X" id="p2F-sJ-Gd6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdo-Sn-WRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017.5" y="-251.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="LiQ-k3-oH3">
             <objects>
@@ -213,7 +338,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvu-xG-r08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="482"/>
+            <point key="canvasLocation" x="640" y="437"/>
         </scene>
     </scenes>
 </document>
