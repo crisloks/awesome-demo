@@ -14,11 +14,15 @@ class NotificationPostViewController: UIViewController {
     }
     
     @IBAction func postNotification(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self)
+        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self, userInfo: ["info":"This is nice"])
     }
     
     func updateNotificationSentLabel() {
         self.infoLabel.text = "Notification sent!"
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
 }
