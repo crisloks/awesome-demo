@@ -12,7 +12,7 @@ class DetailViewController: UIViewController {
     
     weak var delegate:DetailViewControllerDelegate?
     
-    let texts = [0: "Primera lectura", 1: "Segunda", 2: "Tercera", 3: "Cuarta"]
+    let texts = [0: "Lord of the rings", 1: "Sherlock Holmes", 2: "A song of ice and fire", 3: "Another lecture"]
     var lectureNumber = 0
     
     @IBAction func markLectureAsRead(sender: AnyObject) {

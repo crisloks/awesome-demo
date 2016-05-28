@@ -14,7 +14,7 @@ class NotificationPostViewController: UIViewController {
     }
     
     @IBAction func postNotification(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self, userInfo: ["info":"This is nice"])
+        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: nil, userInfo: ["info":"This is nice"])
     }
     
     func updateNotificationSentLabel() {

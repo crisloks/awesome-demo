@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  AwesomeDemo
-//
-//  Created by Cristian Torres on 5/26/16.
-//  Copyright © 2016 Cristian Torres. All rights reserved.
-//
 
 import UIKit
 

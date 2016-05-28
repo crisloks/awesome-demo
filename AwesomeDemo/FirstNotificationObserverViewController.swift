@@ -12,7 +12,7 @@ class FirstNotificationObserverViewController: UIViewController {
     }
     
     func reactToNotification(notification: NSNotification) {
-        if let dict = notification.object as? NSDictionary {
+        if let dict = notification.userInfo {
             if let info = dict["info"] as? String {
                 self.infoLabel.text = "I heard the notification! \(info)"
             } else {
